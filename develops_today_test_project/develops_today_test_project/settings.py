@@ -31,12 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'news.apps.NewsConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +83,7 @@ DATABASES = {
         'NAME': 'develops_today_test',
         'USER': 'postgres',
         'PASSWORD':'wrestler1995GR',
-        'HOST':'localhost',
+        'HOST':'db',
         'PORT':'5432',
     }
 }
@@ -122,3 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+BASE_URL = 'http://127.0.0.1:8000'
